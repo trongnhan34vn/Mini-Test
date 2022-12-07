@@ -4,11 +4,15 @@ function checkCondition() {
     let c = + document.getElementById('c').value;
     let checkTriangle = a + b > c && a + c > b && b + c > a;
     if (checkTriangle) {
-        document.getElementById('checkTriangle').innerHTML = 'Thoả mãn điều kiện tam giác'
+        document.getElementById('checkTriangle').innerHTML = 'Thoả mãn điều kiện tam giác';
+    } else {
+        document.getElementById('checkTriangle').innerHTML = 'KHÔNG Thoả mãn điều kiện tam giác'
     }
 
     let checkRightTriangle = a**2 == b**2 + c**2 || b**2 == a**2 + c**2 || c**2 == a**2 + b**2;
     if (checkRightTriangle) {
         document.getElementById('checkRightTriangle').innerHTML = 'Thoả mãn điều kiện tam giác vuông'
+    } else {
+        document.getElementById('checkRightTriangle').innerHTML = 'KHÔNG Thoả mãn điều kiện tam giác vuông'
     }
 }
